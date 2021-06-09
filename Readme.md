@@ -22,15 +22,12 @@ using Zen.CliFx.Extensions;
 
 public class Startup : BaseStartup
 {
-    public class Startup : BaseStartup
+    public override void ConfigureServices(IServiceCollection services)
     {
-        public override void ConfigureServices(IServiceCollection services)
-        {
-        }
+    }
 
-        public override void ConfigureContainer(ContainerBuilder container)
-        {
-        }
+    public override void ConfigureContainer(ContainerBuilder container)
+    {
     }
 }
 ```
