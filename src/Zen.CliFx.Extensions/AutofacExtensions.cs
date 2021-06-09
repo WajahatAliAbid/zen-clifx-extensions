@@ -13,7 +13,7 @@ namespace Zen.CliFx.Extensions
         public static ContainerBuilder RegisterAllCommandsFromAssembly<TCommand>(this ContainerBuilder container) where TCommand : BaseCommand
         {
             container.RegisterAssemblyTypes(typeof(TCommand).Assembly)
-                .Where(a => a.IsSubclassOf(typeof(TCommand)));
+                .Where(a => a.IsSubclassOf(typeof(BaseCommand)));
             return container;
         }
     }
