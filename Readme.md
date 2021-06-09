@@ -1,5 +1,5 @@
 # Zen CLiFx Extensions
-[![Actions Status](https://github.com/WajahatAliAbid/zen-clifx-extensions/workflows/.NET%20Core%20Build/badge.svg?branch=main)](https://github.com/WajahatAliAbid/zen-clifx-extensions/actions) [![Actions Status](https://github.com/WajahatAliAbid/zen-clifx-extensions/workflows/.NET%20Core%20Publish/badge.svg)](https://github.com/WajahatAliAbid/zen-clifx-extensions/actions) [![Current Version](https://img.shields.io/badge/Version-1.0.0-brightgreen?logo=nuget&labelColor=30363D)](./CHANGELOG.md#100---2021-06-09)
+[![Actions Status](https://github.com/WajahatAliAbid/zen-clifx-extensions/workflows/.NET%20Core%20Build/badge.svg?branch=main)](https://github.com/WajahatAliAbid/zen-clifx-extensions/actions) [![Actions Status](https://github.com/WajahatAliAbid/zen-clifx-extensions/workflows/.NET%20Core%20Publish/badge.svg)](https://github.com/WajahatAliAbid/zen-clifx-extensions/actions) [![Current Version](https://img.shields.io/badge/Version-1.0.1-brightgreen?logo=nuget&labelColor=30363D)](./CHANGELOG.md#101---2021-06-09)
 
 # Overview
 
@@ -76,3 +76,24 @@ Run the command by using dotnet cli
 Hello World
 ```
 
+## Additional options
+You can load configurations from a json file by just adding a file appsettings.json file and adding it to csproj file like following
+```xml
+<ItemGroup>
+    <None Update="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+</ItemGroup>
+```
+
+You can display command help on running a command by using following code snippet
+```csharp
+[Command]
+class PlaceholderCommand : BaseCommand
+{
+    public ValueTask ExecuteCommandAsync(IConsole console, CancellationToken cancellationToken)
+    {
+        return ShowCommandHelpAsync();
+    }
+}
+```
