@@ -17,18 +17,18 @@ namespace Zen.CliFx.Extensions
             ConfigureAppConfiguration(configurationBuilder);
             var configuration = configurationBuilder.Build();
             services.AddSingleton<IConfigurationRoot>(configurationBuilder.Build());
-            ConfigureServices(services);
+            ConfigureServices(services, configuration);
             var containerBuilder = new ContainerBuilder();
             containerBuilder.Populate(services);
-            ConfigureContainer(containerBuilder);
+            ConfigureContainer(containerBuilder, configuration);
             return new AutofacServiceProvider(containerBuilder.Build());
         }
         public virtual void ConfigureAppConfiguration(IConfigurationBuilder configuration)
         {
         }
-        public abstract void ConfigureServices(IServiceCollection services);
+        public abstract void ConfigureServices(IServiceCollection services, IConfigurationRoot configuration);
 
-        public virtual void ConfigureContainer(ContainerBuilder container)
+        public virtual void ConfigureContainer(ContainerBuilder container, IConfigurationRoot configuration)
         {
         }
     }

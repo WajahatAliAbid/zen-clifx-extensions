@@ -1,5 +1,5 @@
 # Zen CLiFx Extensions
-[![Actions Status](https://github.com/WajahatAliAbid/zen-clifx-extensions/workflows/.NET%20Core%20Build/badge.svg?branch=main)](https://github.com/WajahatAliAbid/zen-clifx-extensions/actions) [![Actions Status](https://github.com/WajahatAliAbid/zen-clifx-extensions/workflows/.NET%20Core%20Publish/badge.svg)](https://github.com/WajahatAliAbid/zen-clifx-extensions/actions) [![Current Version](https://img.shields.io/badge/Version-1.0.2-brightgreen?logo=nuget&labelColor=30363D)](./CHANGELOG.md#102---2021-06-09)
+[![Actions Status](https://github.com/WajahatAliAbid/zen-clifx-extensions/workflows/.NET%20Core%20Build/badge.svg?branch=main)](https://github.com/WajahatAliAbid/zen-clifx-extensions/actions) [![Actions Status](https://github.com/WajahatAliAbid/zen-clifx-extensions/workflows/.NET%20Core%20Publish/badge.svg)](https://github.com/WajahatAliAbid/zen-clifx-extensions/actions) [![Current Version](https://img.shields.io/badge/Version-1.1.0-brightgreen?logo=nuget&labelColor=30363D)](./CHANGELOG.md#110---2021-06-09)
 
 # Overview
 
@@ -22,11 +22,11 @@ using Zen.CliFx.Extensions;
 
 public class Startup : BaseStartup
 {
-    public override void ConfigureServices(IServiceCollection services)
+    public override void ConfigureServices(IServiceCollection services, IConfigurationRoot configuration)
     {
     }
 
-    public override void ConfigureContainer(ContainerBuilder container)
+    public override void ConfigureContainer(ContainerBuilder container, IConfigurationRoot configuration)
     {
     }
 }
@@ -63,7 +63,7 @@ public class MainCommand : BaseCommand
 
 ### 4. Register commands with DI
 ```csharp
-public override void ConfigureContainer(ContainerBuilder container)
+public override void ConfigureContainer(ContainerBuilder container, IConfigurationRoot configuration)
 {
     container.RegisterAllCommandsFromAssembly<MainCommand>();
 }
