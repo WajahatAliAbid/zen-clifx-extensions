@@ -13,7 +13,7 @@ namespace Zen.CliFx.Extensions
             var services = new ServiceCollection();
             var configurationBuilder = new ConfigurationBuilder()
                 .AddEnvironmentVariables()
-                .AddJsonFile("appsettings.json",optional: false);
+                .AddJsonFile("appsettings.json",optional: true);
             ConfigureAppConfiguration(configurationBuilder);
             var configuration = configurationBuilder.Build();
             services.AddSingleton<IConfigurationRoot>(configurationBuilder.Build());
