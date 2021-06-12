@@ -14,7 +14,7 @@
 
   <PropertyGroup>
     <Company>WajahatAliAbid</Company>
-    <Description>Zen CLI to automate boring work</Description>
+    <Description>CliFx extensions for Dependency Injection</Description>
     <RepositoryUrl>https://github.com/WajahatAliAbid/zen-clifx-extensions</RepositoryUrl>
     <PackageId>Zen.CliFx.Extensions</PackageId>
   </PropertyGroup>
