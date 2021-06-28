@@ -45,7 +45,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added extension function for Autofac to add all commands from assembly to DI
 - Added Base Command containing execute and validate functions 
 
-[Unreleased]: https://github.com/WajahatAliAbid/zen-clifx-extensions/compare/1.2.0...HEAD
+[Unreleased]: https://github.com/WajahatAliAbid/zen-clifx-extensions/compare/1.3.0...HEAD
+[1.3.0]: https://github.com/WajahatAliAbid/zen-clifx-extensions/compare/1.2.0...1.3.0
 [1.2.0]: https://github.com/WajahatAliAbid/zen-clifx-extensions/compare/1.1.0...1.2.0
 [1.1.0]: https://github.com/WajahatAliAbid/zen-clifx-extensions/compare/1.0.2...1.1.0
 [1.0.2]: https://github.com/WajahatAliAbid/zen-clifx-extensions/compare/1.0.1...1.0.2
