@@ -1,5 +1,5 @@
 # Zen CLiFx Extensions
-[![Actions Status](https://github.com/WajahatAliAbid/zen-clifx-extensions/workflows/.NET%20Core%20Build/badge.svg?branch=main)](https://github.com/WajahatAliAbid/zen-clifx-extensions/actions) [![Actions Status](https://github.com/WajahatAliAbid/zen-clifx-extensions/workflows/.NET%20Core%20Publish/badge.svg)](https://github.com/WajahatAliAbid/zen-clifx-extensions/actions) [![Current Version](https://img.shields.io/badge/Version-1.2.0-brightgreen?logo=nuget&labelColor=30363D)](./CHANGELOG.md#120---2021-06-12)
+[![Actions Status](https://github.com/WajahatAliAbid/zen-clifx-extensions/workflows/.NET%20Core%20Build/badge.svg?branch=main)](https://github.com/WajahatAliAbid/zen-clifx-extensions/actions) [![Actions Status](https://github.com/WajahatAliAbid/zen-clifx-extensions/workflows/.NET%20Core%20Publish/badge.svg)](https://github.com/WajahatAliAbid/zen-clifx-extensions/actions) [![Current Version](https://img.shields.io/badge/Version-1.3.0-brightgreen?logo=nuget&labelColor=30363D)](./CHANGELOG.md#130---2021-06-28)
 
 # Overview
 
