@@ -8,6 +8,9 @@ on:
       - "**.cs"
       - "**.csproj"
       - "**.sln"
+  pull_request:
+    branches:
+      - "*"
   
 jobs:
   build:
@@ -18,7 +21,7 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.x
+        dotnet-version: 3.1.100
     - name: Build with dotnet
       run: dotnet build --configuration Release
     - name: Test with dotnet
