@@ -8,10 +8,11 @@ namespace Zen.CliFx.Extensions
 {
     public abstract class BaseStartup
     {
-        internal IServiceProvider Configure()
+        internal IServiceProvider Configure(string[] args)
         {
             var services = new ServiceCollection();
             var configurationBuilder = new ConfigurationBuilder()
+                .AddCommandLine(args)
                 .AddEnvironmentVariables()
                 .AddJsonFile("appsettings.json",optional: true);
             ConfigureAppConfiguration(configurationBuilder);
