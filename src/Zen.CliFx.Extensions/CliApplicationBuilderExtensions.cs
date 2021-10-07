@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using CliFx;
 using Microsoft.Extensions.DependencyInjection;
+using Zen.Host;
 
 namespace Zen.CliFx.Extensions
 {
@@ -16,8 +17,7 @@ namespace Zen.CliFx.Extensions
         {
             if(args is null)
                 args = new string[0];
-            TStartup startup = new TStartup();
-            var services = startup.Configure(args);
+            var services = StartupUtil.From<TStartup>(args);
             builder
                 .UseTypeActivator(services.GetRequiredService);
             return builder;

@@ -1,5 +1,5 @@
 # Zen CLiFx Extensions
-[![Actions Status](https://github.com/WajahatAliAbid/zen-clifx-extensions/workflows/.NET%20Core%20Build/badge.svg?branch=main)](https://github.com/WajahatAliAbid/zen-clifx-extensions/actions) [![Actions Status](https://github.com/WajahatAliAbid/zen-clifx-extensions/workflows/.NET%20Core%20Publish/badge.svg)](https://github.com/WajahatAliAbid/zen-clifx-extensions/actions) [![Current Version](https://img.shields.io/badge/Version-1.5.0-brightgreen?logo=nuget&labelColor=30363D)](./CHANGELOG.md#150---2021-09-27)
+[![Actions Status](https://github.com/WajahatAliAbid/zen-clifx-extensions/workflows/.NET%20Core%20Build/badge.svg?branch=main)](https://github.com/WajahatAliAbid/zen-clifx-extensions/actions) [![Actions Status](https://github.com/WajahatAliAbid/zen-clifx-extensions/workflows/.NET%20Core%20Publish/badge.svg)](https://github.com/WajahatAliAbid/zen-clifx-extensions/actions) [![Current Version](https://img.shields.io/badge/Version-1.6.0-brightgreen?logo=nuget&labelColor=30363D)](./CHANGELOG.md#160---2021-10-07)
 
 # Overview
 
@@ -18,15 +18,11 @@ Use the following steps to configure Zen CliFx Extensions. Please refer to [Chan
 
 ### 1. Create Startup Class
 ```csharp
-using Zen.CliFx.Extensions;
+using Zen.Host;
 
 public class Startup : BaseStartup
 {
     public override void ConfigureServices(IServiceCollection services, IConfigurationRoot configuration)
-    {
-    }
-
-    public override void ConfigureContainer(ContainerBuilder container, IConfigurationRoot configuration)
     {
     }
 }
@@ -63,9 +59,9 @@ public class MainCommand : BaseCommand
 
 ### 4. Register commands with DI
 ```csharp
-public override void ConfigureContainer(ContainerBuilder container, IConfigurationRoot configuration)
+public override void ConfigureServices(IServiceCollection services, IConfigurationRoot configuration)
 {
-    container.RegisterAllCommandsFromAssembly<MainCommand>();
+    services.RegisterAllCommandsFromAssembly<MainCommand>();
 }
 ```
 
@@ -77,15 +73,6 @@ Hello World
 ```
 
 ## Additional options
-You can load configurations from a json file by just adding a file appsettings.json file and adding it to csproj file like following
-```xml
-<ItemGroup>
-    <None Update="appsettings.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-</ItemGroup>
-```
-
 You can display command help on running a command by using following code snippet
 ```csharp
 [Command]
@@ -95,5 +82,13 @@ class PlaceholderCommand : BaseCommand
     {
         return ShowCommandHelpAsync();
     }
+}
+```
+Or you can create a command which only displays help
+```csharp
+[Command]
+class HelpCommand : BaseHelpCommand
+{
+
 }
 ```

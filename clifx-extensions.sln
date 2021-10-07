@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{52C58659-9C6
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zen.CliFx.Extensions", "src\Zen.CliFx.Extensions\Zen.CliFx.Extensions.csproj", "{46E6B8D8-4134-4D39-B0E9-1501407127F2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A6EAED60-635C-484F-B39A-E603872B25D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zen.CliFx.Extensions.Tests", "tests\Zen.CliFx.Extensions.Tests\Zen.CliFx.Extensions.Tests.csproj", "{EC0CF86A-3C32-4511-AAE7-4922290C0929}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,8 +36,21 @@ Global
 		{46E6B8D8-4134-4D39-B0E9-1501407127F2}.Release|x64.Build.0 = Release|Any CPU
 		{46E6B8D8-4134-4D39-B0E9-1501407127F2}.Release|x86.ActiveCfg = Release|Any CPU
 		{46E6B8D8-4134-4D39-B0E9-1501407127F2}.Release|x86.Build.0 = Release|Any CPU
+		{EC0CF86A-3C32-4511-AAE7-4922290C0929}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC0CF86A-3C32-4511-AAE7-4922290C0929}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC0CF86A-3C32-4511-AAE7-4922290C0929}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EC0CF86A-3C32-4511-AAE7-4922290C0929}.Debug|x64.Build.0 = Debug|Any CPU
+		{EC0CF86A-3C32-4511-AAE7-4922290C0929}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EC0CF86A-3C32-4511-AAE7-4922290C0929}.Debug|x86.Build.0 = Debug|Any CPU
+		{EC0CF86A-3C32-4511-AAE7-4922290C0929}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC0CF86A-3C32-4511-AAE7-4922290C0929}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC0CF86A-3C32-4511-AAE7-4922290C0929}.Release|x64.ActiveCfg = Release|Any CPU
+		{EC0CF86A-3C32-4511-AAE7-4922290C0929}.Release|x64.Build.0 = Release|Any CPU
+		{EC0CF86A-3C32-4511-AAE7-4922290C0929}.Release|x86.ActiveCfg = Release|Any CPU
+		{EC0CF86A-3C32-4511-AAE7-4922290C0929}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{46E6B8D8-4134-4D39-B0E9-1501407127F2} = {52C58659-9C62-4500-AC19-ED59BEB49AF5}
+		{EC0CF86A-3C32-4511-AAE7-4922290C0929} = {A6EAED60-635C-484F-B39A-E603872B25D0}
 	EndGlobalSection
 EndGlobal
