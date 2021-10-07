@@ -17,7 +17,7 @@ namespace Zen.CliFx.Extensions
         {
             if(args is null)
                 args = new string[0];
-            var services = StartupUtil.From<TStartup>(args);
+            var services = StartupUtil.GetServiceProviderFrom<TStartup>(args);
             builder
                 .UseTypeActivator(services.GetRequiredService);
             return builder;
