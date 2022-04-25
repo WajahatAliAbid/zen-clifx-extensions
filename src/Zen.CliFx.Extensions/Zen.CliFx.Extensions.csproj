@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CliFx" Version="2.0.6" />
+    <PackageReference Include="CliFx" Version="2.2.4" />
     <PackageReference Include="Zen.Host" Version="1.3.0" />
   </ItemGroup>
 
